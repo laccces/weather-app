@@ -21,18 +21,14 @@ response = requests.get(complete_url)
 # Parsing the response
 data = response.json()
 
-with open('data.json', 'w') as file:
-    json.dump(data, file, indent=4)
-
 # Extracting necessary info
-# temperature = data['main']['temp']
-# humidity = data['main']['humidity']
-# description = data['weather'][0]['description']
+current_temperature = data['current']['temp_c']
+humidity = data['current']['humidity']
+description = data['current']['condition']['text']
 
 # Displaying the data
-# print("Temperature : " +
-#                     str(round(temperature - 273.15, 2)) + " Celsius")
-# print("Humidity : " +
-#                     str(humidity) + "%")
-# print("Description : " +
-#                     str(description))
+print("Current weather:")
+print("Current Temperature: " + str(current_temperature) + " Celsius")
+print("Humidity: " + str(humidity) + "%")
+print("Conditions: " + description)
+
