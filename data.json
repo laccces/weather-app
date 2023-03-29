@@ -1,6 +1,0 @@
-{
-    "error": {
-        "code": 1002,
-        "message": "API key is invalid or not provided."
-    }
-}
