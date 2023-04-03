@@ -1,8 +1,9 @@
 import requests
 import json
+import os
 
 # Enter your API key here
-api_key = "f27bbe94a88d423fa13100714232903"
+api_key = os.environ.get('WEATHER_API_KEY')
 
 # Base URL for the API
 base_url = "http://api.weatherapi.com/v1/forecast.json?"
